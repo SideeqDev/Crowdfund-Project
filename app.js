@@ -10,13 +10,15 @@ const closeModalBtn = document.querySelector("#modal svg");
 const openButtons = document.querySelectorAll(".stockBtn");
 const selects = document.querySelectorAll(".selection-chooseArea label");
 const continueBtns = document.querySelectorAll(".continue");
-
-const totalFund = 0;
+const confirmed = document.querySelector(".confirmation");
+const confirmBtn = document.getElementById("confirm");
+const totalRaised = document.querySelector("#totalRaised")
+let totalFund = 0 ;
+let totalbackers ;
 
 
 const toggleModal = ()=>{
 	modal.classList.toggle("active");
-	document.querySelector(".menu").classList.toggle("inactive");
 }
 
 const closeModal = ()=>{
@@ -42,7 +44,7 @@ OpenModalbtn.addEventListener("click",()=>{
 
 const toggleOverlay = ()=>{
 	overlay.classList.toggle("active");
-	// document.querySelector(".menu").classList.toggle("inactive");
+	document.querySelector(".menu").classList.toggle("inactive");
 }
 
 selectRewardBtns.forEach(btn=>{
@@ -123,7 +125,7 @@ const updateStock = ()=>{
 		if(newStock === 0){
 			selectedModalStock.querySelector(".continue").innerHTML = "Out of Stock";
 			selectedOption.querySelector(".stockBtn").innerHTML = "Out of Stock";
-			selectedModalStock.classList.replace("active","inactive");
+			selectedModalStock.classList.add("inactive");
 			selectedOption.classList.add("inactive");
 		}
 	}
@@ -134,21 +136,55 @@ continueBtns.forEach(btn=>{
 	btn.addEventListener("click",()=>{
 		const pledgeInput = document.querySelector(`.selection.active .pledge-Form input`);
 		const pledgename = pledgeInput.getAttribute("name"); 
-		let inputVal = Number(pledgeInput.value);
+		totalFund = Number(pledgeInput.value);
 
-		if(!inputVal || inputVal < pledgeConditons[pledgename]){
-			console.log(pledgeInput.parentElement)
+		if(!totalFund || totalFund < pledgeConditons[pledgename]){
 			pledgeInput.parentElement.classList.add("invalid");
 		}else{
 			pledgeInput.parentElement.classList.remove("invalid");
 			pledgeInput.value = '';
-			toggleModal();
-			setTimeout(()=>{
-				toggleOverlay();
-				updateStock();
-				clearSelect();
-			},500)
-			
+
+			updateStock();
+			toggleModal()
+			toggleOverlay();
+			clearSelect();
+			setTimeout(()=>{	
+				confirmation()
+			},1000)	
 		}
 	})
+})
+
+
+const confirmation = ()=>{
+	overlay.classList.toggle("active");
+	document.querySelector(".menu").classList.toggle("inactive");
+	confirmed.classList.toggle("active");
+
+	const Raised = Math.round(parseFloat(totalRaised.innerHTML.replace(",","")) + totalFund);
+	let newRaised = Raised.toString();
+
+	const Backed = Math.round(
+    parseFloat(totalBacked.innerHTML.replace(",", "")) + 1);
+	let newBackers = Backed.toString();
+
+
+	for(let i = 3; i < newRaised.length; i += 4){
+		newRaised = newRaised.slice(0,-i) + ',' + newRaised.slice(-i);
+		console.log(Raised)
+		console.log(newRaised)
+	}
+
+	for (let i = 3; i < newBackers.length; i += 4) {
+    newBackers.slice(0, -i) + "," + newBackers.slice(-i);
+    }
+
+	totalRaised.innerHTML = newRaised;
+	// totalBacked.innerHTML = newBackers
+
+}
+
+confirmBtn.addEventListener("click",()=>{
+	toggleOverlay();
+	confirmed.classList.toggle("active")
 })
