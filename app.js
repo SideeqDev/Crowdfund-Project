@@ -12,7 +12,11 @@ const selects = document.querySelectorAll(".selection-chooseArea label");
 const continueBtns = document.querySelectorAll(".continue");
 const confirmed = document.querySelector(".confirmation");
 const confirmBtn = document.getElementById("confirm");
-const totalRaised = document.querySelector("#totalRaised")
+const totalRaised = document.querySelector("#totalRaised");
+const mobileNav = document.querySelector("#mobileNav");
+const mobileNavOpen = document.querySelector("#openNav");
+const mobileNavClose = document.querySelector("#closeNav");
+const navToggles = [mobileNavOpen,mobileNavClose];
 let totalFund = 0 ;
 let totalbackers ;
 
@@ -26,11 +30,17 @@ const closeModal = ()=>{
 	toggleModal();
 }
 
+const toggleNavFunc = ()=>{
+	overlay.classList.toggle("active");
+	mobileNav.classList.toggle("active");
+	navToggles.forEach(n=>n.classList.toggle("active"));
+}
+
 bookmark.addEventListener("click",()=>{
 	setTimeout(()=>{
 	bookmark.classList.toggle("active");
 	if(bookmark.classList.contains("active")){
-		bookmark.querySelector("p").textContent = "Bookmarked"
+		bookmark.querySelector("p").textContent = "Bookmarked";
 	}else{
 		bookmark.querySelector("p").textContent = "Bookmark";
 	}
@@ -39,7 +49,7 @@ bookmark.addEventListener("click",()=>{
 
 OpenModalbtn.addEventListener("click",()=>{
 	toggleOverlay();
-	toggleModal()
+	toggleModal();
 })
 
 const toggleOverlay = ()=>{
@@ -51,17 +61,32 @@ selectRewardBtns.forEach(btn=>{
 	btn.addEventListener("click",()=>{
 		toggleOverlay();
 		toggleModal();
-		clearSelect()
+		clearSelect();
 		selectNewOption(btn.parentElement.parentElement.id);
-
 	})
 })
 
+mobileNavOpen.addEventListener("click",()=>{
+	mobileNav.style.opacity = 1;
+	mobileNav.style.maxHeight = mobileNav.scrollHeight + "px";
+	toggleNavFunc();
+})
+
+mobileNavClose.addEventListener("click",()=>{
+	mobileNav.style.opacity = 0;
+	mobileNav.style.maxHeight = 0;
+	toggleNavFunc();
+})
 
 overlay.addEventListener("click",(e)=>{
-	if(e.target.className != "modal" ){
+	if(mobileNav.classList.contains("active")){
+		toggleNavFunc();
+		mobileNav.style.opacity = 0;
+		mobileNav.style.maxHeight = 0;
+	}else{
+		closeModal();
 		clearSelect();
- 		closeModal();
+		overlay.classList.remove("active");
 	}
 })
 
@@ -171,8 +196,6 @@ const confirmation = ()=>{
 
 	for(let i = 3; i < newRaised.length; i += 4){
 		newRaised = newRaised.slice(0,-i) + ',' + newRaised.slice(-i);
-		console.log(Raised)
-		console.log(newRaised)
 	}
 
 	for (let i = 3; i < newBackers.length; i += 4) {
@@ -180,7 +203,7 @@ const confirmation = ()=>{
     }
 
 	totalRaised.innerHTML = newRaised;
-	// totalBacked.innerHTML = newBackers
+	
 
 }
 
