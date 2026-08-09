@@ -137,7 +137,7 @@ selects.forEach(btn=>{
 const updateStock = ()=>{
 	const selector = document.querySelector(".selection.active .selection-chooseArea input").id;
 	const stockStat = document.querySelector(`#${selector} .stock-con h1`);
-	const modalStock = document.querySelector(`.selection.active .selection-chooseArea h2`);
+	const modalStock = document.querySelectorAll(`.selection.active h2`);
 	const selectedModalStock = document.querySelector(".selection.active");
 	const selectedOption = document.querySelector(`#${selector}.option`);
 
@@ -145,7 +145,9 @@ const updateStock = ()=>{
 	if(selector !== "noReward"){
 		const newStock = (Number(stockStat.innerHTML)-1);
 		stockStat.innerHTML = newStock.toString();
-		modalStock.innerHTML = newStock.toString();
+		modalStock.forEach(stck=>{
+			stck.innerHTML = newStock.toString();
+		})
 
 		if(newStock === 0){
 			selectedModalStock.querySelector(".continue").innerHTML = "Out of Stock";

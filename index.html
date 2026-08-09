@@ -1,325 +1,372 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CrowdFund App</title>
-	<link rel="stylesheet" href="./app.css">
-</head>
-<body>
-	<main class="container">
-		<header class="main-header">
-			<div class="menu">
-				<img src="logo.svg" alt="Crowdfund Logo" id="logo">
-				<nav class="desktopNav">
-					<a href="#" class="navs">Home</a>
-					<a href="#" class="navs">About</a>
-					<a href="#" class="navs">Contact Us</a>
-					<a href="#" class="navs">Services</a>
-				</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrowdFund App</title>
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="main-header">
+        <div class="menu">
+          <img src="logo.svg" alt="Crowdfund Logo" id="logo" />
+          <nav class="desktopNav">
+            <a href="#" class="navs">Home</a>
+            <a href="#" class="navs">About</a>
+            <a href="#" class="navs">Contact Us</a>
+            <a href="#" class="navs">Services</a>
+          </nav>
 
-				<svg width="16" height="15" id="openNav" class="navToggle active">
-                    <g fill="#FFF" fill-rule="evenodd">
-                        <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
-                    </g>
-                </svg>
-                <svg width="14" height="15" id="closeNav" class="navToggle">
-                    <g fill="#FFF" fill-rule="evenodd">
-                        <path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z" />
-                        <path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z" />
-                    </g>
-                </svg>
-			</div>
-		</header>
+          <svg width="16" height="15" id="openNav" class="navToggle active">
+            <g fill="#FFF" fill-rule="evenodd">
+              <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
+            </g>
+          </svg>
+          <svg width="14" height="15" id="closeNav" class="navToggle">
+            <g fill="#FFF" fill-rule="evenodd">
+              <path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z" />
+              <path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z" />
+            </g>
+          </svg>
+        </div>
+      </header>
 
-		<section id="intro">
-			 <img src="logo-mastercraft.svg" alt="Mastercraft Logo">
-			 <h2 class="intro-header">Mastercraft Bamboo Monitor Riser</h2>
-			 <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain</p>
-			 
-			 <div class="buttonRow">
-				<button >Back This Project</button>
-				<div id="bookmark">
-                    <svg width="56" height="56">
-                        <g fill="none" fill-rule="evenodd">
-                            <circle fill="hsl(0, 0%, 10%)" cx="28" cy="28" r="28" />
-                            <path fill="hsl(0, 0%, 100%)" d="M23 19v18l5-5.058L33 37V19z" />
-                        </g>
-                    </svg>
-                    <p>Bookmark</p>
-                </div>
-			 </div>
-		</section>
+      <section id="intro">
+        <img src="logo-mastercraft.svg" alt="Mastercraft Logo" />
+        <h2 class="intro-header">Mastercraft Bamboo Monitor Riser</h2>
+        <p>
+          A beautiful & handcrafted monitor stand to reduce neck and eye strain
+        </p>
 
-	<section id="numbers">
-		<div class="number-row">
-			<div id="total-backed" class="number">
-				<h2>$<span id="totalRaised">15,000</span></h2>
-				<p>of $100,000 backed</p>
-			</div>
-			<hr>
-			<div id="total-backers" class="number">
-				<h2>5,688</h2>
-				<p>total backers</p>
-			</div>
-			<hr>
-			<div id="time" class="number">
-				<h2>50</h2>
-				<p>days left</p>
-			</div>
-		</div>
-		<div class="progress-bar">
-			<span></span>
-		</div>
-	</section>
+        <div class="buttonRow">
+          <button>Back This Project</button>
+          <div id="bookmark">
+            <svg width="56" height="56">
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="hsl(0, 0%, 10%)" cx="28" cy="28" r="28" />
+                <path fill="hsl(0, 0%, 100%)" d="M23 19v18l5-5.058L33 37V19z" />
+              </g>
+            </svg>
+            <p>Bookmark</p>
+          </div>
+        </div>
+      </section>
 
-	<section id="about">
-		<h3>About this project</h3>
-		<p class="text">
-			The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
-			<br/><br/>
-			Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.
-		</p>
+      <section id="numbers">
+        <div class="number-row">
+          <div id="total-backed" class="number">
+            <h2>$<span id="totalRaised">15,000</span></h2>
+            <p>of $100,000 backed</p>
+          </div>
+          <hr />
+          <div id="total-backers" class="number">
+            <h2>5,688</h2>
+            <p>total backers</p>
+          </div>
+          <hr />
+          <div id="time" class="number">
+            <h2>50</h2>
+            <p>days left</p>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <span></span>
+        </div>
+      </section>
 
-		<div class="pledge-options-con">
-			<div class="option" id="bamboo">
-				<div class="option-header">
-					<h3>Bamboo Stand</h3>
-					<p>Pledege $25 or more</p>
-				</div>
+      <section id="about">
+        <h3>About this project</h3>
+        <p class="text">
+          The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
+          that elevates your screen to a more comfortable viewing height.
+          Placing your monitor at eye level has the potential to improve your
+          posture and make you more comfortable while at work, helping you stay
+          focused on the task at hand.
+          <br /><br />
+          Featuring artisan craftsmanship, the simplicity of design creates
+          extra desk space below your computer to allow notepads, pens, and USB
+          sticks to be stored under the stand.
+        </p>
 
-				<p class="text">
-					You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
-				</p>
+        <div class="pledge-options-con">
+          <div class="option" id="bamboo">
+            <div class="option-header">
+              <h3>Bamboo Stand</h3>
+              <p>Pledege $25 or more</p>
+            </div>
 
-				<div class="stock-con">
-					<span>
-						<h1>101</h1>
-						<p class="text">left</p>
-					</span>
-					
-					<button class="stockBtn">Select Reward</button>
-				</div>
-			</div>
+            <p class="text">
+              You get an ergonomic stand made of natural bamboo. You've helped
+              us launch our promotional campaign, and you’ll be added to a
+              special Backer member list.
+            </p>
 
-			<div class="option" id="black">
-				<div class="option-header">
-					<h3>Black</h3>
-					<p>Pledege $75 or more</p>
-				</div>
+            <div class="stock-con">
+              <span>
+                <h1>101</h1>
+                <p class="text">left</p>
+              </span>
 
-				<p class="text">
-					You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
-				</p>
-				<!--just did something  -->
+              <button class="stockBtn">Select Reward</button>
+            </div>
+          </div>
 
-				<div class="stock-con">
-					<span>
-						<h1>3</h1>
-						<p class="text">left</p>
-					</span>
-					<button class="stockBtn">Select Reward</button>
-				</div>
-			</div>
+          <div class="option" id="black">
+            <div class="option-header">
+              <h3>Black</h3>
+              <p>Pledege $75 or more</p>
+            </div>
 
-			<div class="option" id="mahogany">
-				<div class="option-header">
-					<h3>Mahogany Special Eition</h3>
-					<p>Pledege $200 or more</p>
-				</div>
+            <p class="text">
+              You get an ergonomic stand made of natural bamboo. You've helped
+              us launch our promotional campaign, and you’ll be added to a
+              special Backer member list.
+            </p>
+            <!--just did something  -->
 
-				<p class="text">
-					You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
-				</p>
+            <div class="stock-con">
+              <span>
+                <h1>3</h1>
+                <p class="text">left</p>
+              </span>
+              <button class="stockBtn">Select Reward</button>
+            </div>
+          </div>
 
-				<div class="stock-con">
-					<span>
-						<h1>1</h1>
-						<p class="text">left</p>
-					</span>
-					<button class="stockBtn">Select Reward</button>
-				</div>
-			</div>
-		</div>
+          <div class="option" id="mahogany">
+            <div class="option-header">
+              <h3>Mahogany Special Edition</h3>
+              <p>Pledege $200 or more</p>
+            </div>
 
-		<div id="modal" >
-			<div class="modal-header">
-				
-			<svg width="15" height="15" id="closeModal">
-				<path
+            <p class="text">
+              You get an ergonomic stand made of natural bamboo. You've helped
+              us launch our promotional campaign, and you’ll be added to a
+              special Backer member list.
+            </p>
+
+            <div class="stock-con">
+              <span>
+                <h1>1</h1>
+                <p class="text">left</p>
+              </span>
+              <button class="stockBtn">Select Reward</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal">
+          <div class="modal-header">
+            <svg width="15" height="15" id="closeModal">
+              <path
                 d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
-                fill="#000" fill-rule="evenodd" opacity="0.4" />
-			</svg>
+                fill="#000"
+                fill-rule="evenodd"
+                opacity="0.4"
+              />
+            </svg>
 
-				<h3>Back this project</h3>
+            <h3>Back this project</h3>
 
-				<p class="text">
-					Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
-				</p>
+            <p class="text">
+              Want to support us in bringing Mastercraft Bamboo Monitor Riser
+              out in the world?
+            </p>
+          </div>
 
-			</div>
+          <div class="project-options">
+            <div class="selection">
+              <div class="selection-chooseArea">
+                <input
+                  type="radio"
+                  name="noReward"
+                  id="noReward"
+                  name="noReward"
+                />
+                <label for="noReward">
+                  <div class="radioCircle"></div>
+                  <h3>Pledge with no reward</h3>
+                </label>
+              </div>
 
-			<div class="project-options">
-				<div class="selection">
-					<div class="selection-chooseArea">
-						<input type="radio" name="noReward" id="noReward" name="noReward">
-						<label for="noReward">
-							<div class="radioCircle"></div>
-							<h3>Pledge with no reward</h3>
-						</label> 
-					</div>
+              <p class="text">
+                Choose to support us without a reward if you simply believe in
+                our project. As a backer, you will be signed up to receive
+                product updates via email.
+              </p>
 
-					<p class="text">
-						Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.
-					</p>
+              <div class="border"></div>
+              <div class="selection-pledgeArea" style="max-height: 0">
+                <div class="pledge-Row">
+                  <p class="text">Enter your Pledge</p>
 
+                  <div class="pledge-Form">
+                    <input type="text" placeholder="0.00" name="noReward" />
+                    <button class="continue">Continue</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-					<div class="border"></div>
-					<div class="selection-pledgeArea" style="max-height:0;">
-						<div class="pledge-Row">
-							<p class="text">Enter your Pledge</p>
+          <div class="project-options">
+            <div class="selection">
+              <div class="selection-chooseArea">
+                <input
+                  type="radio"
+                  name="selection"
+                  id="bamboo"
+                  value="bamboo"
+                />
+                <label for="bamboo">
+                  <div class="radioCircle"></div>
+                  <h3>Bamboo Stand</h3>
+                  <h4>Pledge $25 or more</h4>
+                </label>
 
-							<div class="pledge-Form">
-								<input type="text" placeholder="0.00" name="noReward">
-								<button class="continue">
-									Continue
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                <span class="desktopStock">
+                  <h2>101</h2>
+                  <p class="text">left</p>
+                </span>
+              </div>
 
-			<div class="project-options">
-				<div class="selection">
-					<div class="selection-chooseArea">
-						<input type="radio" name="selection" id="bamboo" value="bamboo">
-						<label for="bamboo">
-							<div class="radioCircle"></div>
-								<h3>Bamboo Stand</h3>
-								<h4>Pledge $25 or more </h4>
-						</label>
+              <p class="text">
+                Choose to support us without a reward if you simply believe in
+                our project. As a backer, you will be signed up to receive
+                product updates via email.
+              </p>
 
-						<span>
-							<h2>101</h2>
-							<p class="text">left</p>
-						</span>
-					</div>
-					
-					<p class="text">
-						Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.
-					</p>
+              <span class="mobileStock">
+                <h2>101</h2>
+                <p class="text">left</p>
+              </span>
 
-					<div class="border"></div>
-					<div class="selection-pledgeArea" style="max-height:0;">
-						<div class="pledge-Row" >
-							<p class="text">Enter your Pledge</p>
+              <div class="border"></div>
+              <div class="selection-pledgeArea" style="max-height: 0">
+                <div class="pledge-Row">
+                  <p class="text">Enter your Pledge</p>
 
-							<div class="pledge-Form">
-								<input type="text" placeholder="0.00" name="bamboo">
-								<button class="continue">
-									Continue
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                  <div class="pledge-Form">
+                    <input type="text" placeholder="0.00" name="bamboo" />
+                    <button class="continue">Continue</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-			<div class="project-options">
-				<div class="selection">
-					<div class="selection-chooseArea">
-						<input type="radio" name="selection" id="black" value="black">
+          <div class="project-options">
+            <div class="selection">
+              <div class="selection-chooseArea">
+                <input type="radio" name="selection" id="black" value="black" />
 
-						<label for="black">
-							<div class="radioCircle"></div>
-							<h3>Black Edition</h3>
-							<h4>Pledge $75 or more</h4>
-						</label>
+                <label for="black">
+                  <div class="radioCircle"></div>
+                  <h3>Black Edition</h3>
+                  <h4>Pledge $75 or more</h4>
+                </label>
 
-						<span>
-							<h2>3</h2>
-							<p class="text">left</p>
-						</span>
-					</div>
+                <span class="desktopStock">
+                  <h2>3</h2>
+                  <p class="text">left</p>
+                </span>
+              </div>
 
-					<p class="text">
-						Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.
-					</p>
+              <p class="text">
+                Choose to support us without a reward if you simply believe in
+                our project. As a backer, you will be signed up to receive
+                product updates via email.
+              </p>
 
-					<div class="border"></div>
+              <span class="mobileStock">
+                <h2>3</h2>
+                <p class="text">left</p>
+              </span>
 
-					<div class="selection-pledgeArea" style="max-height:0;">
-						<div class="pledge-Row" >
-							<p class="text">Enter your Pledge</p>
+              <div class="border"></div>
 
-							<div class="pledge-Form">
-								<input type="text" placeholder="0.00" name="black">
-								<button class="continue">
-									Continue
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+              <div class="selection-pledgeArea" style="max-height: 0">
+                <div class="pledge-Row">
+                  <p class="text">Enter your Pledge</p>
 
-			<div class="project-options">
-				<div class="selection">
-					<div class="selection-chooseArea">
-						<input type="radio" name="selection" id="mahogany" value="mahogany">
-						<label for="mahogany">
-							<div class="radioCircle"></div>
-							<h3>Mahogany Stand</h3>
-							<h4>Pledge $200 or more</h4>
-						</label>
+                  <div class="pledge-Form">
+                    <input type="text" placeholder="0.00" name="black" />
+                    <button class="continue">Continue</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-						<span>
-							<h2>1</h2>
-							<p class="text">left</p>
-						</span>
-					</div>
+          <div class="project-options">
+            <div class="selection">
+              <div class="selection-chooseArea">
+                <input
+                  type="radio"
+                  name="selection"
+                  id="mahogany"
+                  value="mahogany"
+                />
+                <label for="mahogany">
+                  <div class="radioCircle"></div>
+                  <h3>Mahogany Stand</h3>
+                  <h4>Pledge $200 or more</h4>
+                </label>
 
-					<p class="text">
-						Choose to support us without a reward if you simply believe in ou project. As a backer, you will be signed up to receive product updates via email.
-					</p>
+                <span class="desktopStock">
+                  <h2>1</h2>
+                  <p class="text">left</p>
+                </span>
+              </div>
 
-					<div class="border"></div>
-					<div class="selection-pledgeArea" style="max-height: 0;">
-						<div class="pledge-Row" >
-							<p class="text">Enter your Pledge</p>
+              <p class="text">
+                Choose to support us without a reward if you simply believe in
+                ou project. As a backer, you will be signed up to receive
+                product updates via email.
+              </p>
 
-							<div class="pledge-Form">
-								<input type="text" placeholder="0.00" name="mahogany">
-								<button class="continue">
-									Continue
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<div class="confirmation">
-			<main>
-			<img src="./icon-check.svg" class="check">
+              <span class="mobileStock">
+                <h2>1</h2>
+                <p class="text">left</p>
+              </span>
 
-			<h2>Thanks for your support !</h2>
-			<p class="text">
-				Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.
-			</p>
-			<button id="confirm">Got It</button>
-			</main>
-		</div>
-		<nav id="mobileNav" style="opacity: 0; max-height: 0;">
-					<a href="#" class="navs">Home</a>
-					<a href="#" class="navs">About</a>
-					<a href="#" class="navs">Contact Us</a>
-					<a href="#" class="navs">Services</a>
-		</nav>
-		<div class="overlay"></div>
-	</main>
-</body>
-<script src="./app.js"></script>
+              <div class="border"></div>
+              <div class="selection-pledgeArea" style="max-height: 0">
+                <div class="pledge-Row">
+                  <p class="text">Enter your Pledge</p>
+
+                  <div class="pledge-Form">
+                    <input type="text" placeholder="0.00" name="mahogany" />
+                    <button class="continue">Continue</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="confirmation">
+        <main>
+          <img src="./icon-check.svg" class="check" />
+
+          <h2>Thanks for your support !</h2>
+          <p class="text">
+            Your pledge brings us one step closer to sharing Mastercraft Bamboo
+            Monitor Riser worldwide. You will get an email once our campaign is
+            completed.
+          </p>
+          <button id="confirm">Got It</button>
+        </main>
+      </div>
+      <nav id="mobileNav" style="opacity: 0; max-height: 0">
+        <a href="#" class="navs">Home</a>
+        <a href="#" class="navs">About</a>
+        <a href="#" class="navs">Contact Us</a>
+        <a href="#" class="navs">Services</a>
+      </nav>
+      <div class="overlay"></div>
+    </main>
+  </body>
+  <script src="./app.js"></script>
 </html>
