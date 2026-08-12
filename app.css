@@ -443,7 +443,7 @@ input[type="radio"] {
   display: flex;
   align-items: center;
   gap: 1rem;
-  position: relative;
+  position: relative; 
 }
 
 .pledge-Form input {
@@ -512,6 +512,12 @@ input[type="radio"] {
 
 .pledge-Row {
   position: relative;
+}
+
+.pledge-Form{
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
 }
 
 .pledge-Form::after {
@@ -586,8 +592,8 @@ input[type="radio"] {
 .navToggle {
   display: none;
   transition:
-    transform,
-    opacity 0.5s ease-in-out;
+  transform,
+  opacity 0.5s ease-in-out;
 }
 
 #mobileNav {
@@ -596,6 +602,10 @@ input[type="radio"] {
 
 .mobileStock {
   display: none;
+}
+
+.confirmed{
+	scroll-margin-top: 1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -686,6 +696,10 @@ input[type="radio"] {
     width: 80%;
   }
 
+  .number-row{
+	flex-direction: column;
+  }
+
   #bookmark {
     padding: 0;
   }
@@ -727,10 +741,24 @@ input[type="radio"] {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+	justify-content: center;
     padding-bottom: 1rem;
+	
   }
 
   .pledge-Form {
-    gap: 1rem;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+  }
+
+  .pledge-Form input{
+	flex-grow: 1;
+	width: 50%;
+  }
+
+  .confirmation main{
+	width:90%;
   }
 }
