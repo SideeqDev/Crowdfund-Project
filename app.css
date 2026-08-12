@@ -641,8 +641,8 @@ input[type="radio"] {
     transition: all 0.7s ease;
     flex-direction: column;
     background-color: hsl(0, 0%, 90%);
-    position: absolute;
-    top: 15vh;
+    position:fixed;
+    top: 13.5vh;
     width: 90%;
     margin: 0 5%;
     pointer-events: none;
