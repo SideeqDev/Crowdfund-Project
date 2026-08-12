@@ -31,14 +31,13 @@ class stats {
 document.addEventListener("DOMContentLoaded", () => {
   const providedStats = new stats();
 
-  let formattedfunds = providedStats.Totalfunds.toString();
-  formatted = formatted.slice(0, -3) + "," + formatted.slice(-3);
-  console.log(formatted);
+  let formatedfunds = providedStats.Totalfunds.toString();
+  formatedfunds = formatedfunds.slice(0, -3) + "," + formatedfunds.slice(-3);
 
   let formattedbackers = providedStats.backers.toString();
-  formattedbackers = formattedbackers.slice(0, -3) + "," + formatted.slice(-3);
+  formattedbackers = formattedbackers.slice(0, -3) + "," + formattedbackers.slice(-3);
 
-  totalRaised.innerHTML = formattedfunds;
+  totalRaised.innerHTML = formatedfunds;
   document.querySelector("#total-backers h2").innerHTML = formattedbackers;
 });
 
