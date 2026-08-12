@@ -30,9 +30,16 @@ class stats {
 
 document.addEventListener("DOMContentLoaded", () => {
   const providedStats = new stats();
-  totalRaised.innerHTML = providedStats.Totalfunds.toString();
-  document.querySelector("#total-backers h2").innerHTML =
-    providedStats.backers.toString();
+
+  let formattedfunds = providedStats.Totalfunds.toString();
+  formatted = formatted.slice(0, -3) + "," + formatted.slice(-3);
+  console.log(formatted);
+
+  let formattedbackers = providedStats.backers.toString();
+  formattedbackers = formattedbackers.slice(0, -3) + "," + formatted.slice(-3);
+
+  totalRaised.innerHTML = formattedfunds;
+  document.querySelector("#total-backers h2").innerHTML = formattedbackers;
 });
 
 const toggleModal = () => {
@@ -227,18 +234,18 @@ confirmBtn.addEventListener("click", () => {
   }
 
   setTimeout(() => {
-	const numberRow = document.querySelector("#numbers");
-	numberRow.classList.add("confirmed");
+    const numberRow = document.querySelector("#numbers");
+    numberRow.classList.add("confirmed");
     progBar.style.transition = "width 0s ease-out";
     progBar.style.width = 0;
     progBar.style.maxWidth = 0;
-	numberRow.scrollIntoView({ behavior: "smooth" });
+    numberRow.scrollIntoView({ behavior: "smooth" });
 
     setTimeout(() => {
       totalRaised.innerHTML = newRaised;
       totalBacked.innerHTML = newBackers;
       progBar.style.maxWidth = "100%";
-	  console.log(totalFund)
+      console.log(totalFund);
       let newWidth = (Raised * 100) / 100000;
 
       if (newWidth < 100) {

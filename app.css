@@ -646,7 +646,7 @@ input[type="radio"] {
     width: 90%;
     margin: 0 5%;
     pointer-events: none;
-    z-index: 3;
+    z-index: 3; 
     border-radius: 5px;
     justify-content: space-between;
     overflow: hidden;
